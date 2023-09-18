@@ -68,8 +68,10 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
-
+  gem 'minitest'
+  gem 'minitest-reporters'
 end
 
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem "sassc-rails"
+gem "bcrypt"

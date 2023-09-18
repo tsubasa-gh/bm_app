@@ -68,8 +68,10 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.5)
       public_suffix (>= 2.0.2, < 6.0)
+    ansi (1.5.0)
     autoprefixer-rails (10.4.15.0)
       execjs (~> 2)
+    bcrypt (3.1.19)
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
@@ -122,6 +124,11 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.5)
     minitest (5.20.0)
+    minitest-reporters (1.6.1)
+      ansi
+      builder
+      minitest (>= 5.0)
+      ruby-progressbar
     msgpack (1.7.2)
     mysql2 (0.5.5)
     net-imap (0.3.7)
@@ -180,6 +187,7 @@ GEM
     reline (0.3.8)
       io-console (~> 0.5)
     rexml (3.2.6)
+    ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -229,12 +237,15 @@ PLATFORMS
   x86_64-darwin-22
 
 DEPENDENCIES
+  bcrypt
   bootsnap
   bootstrap-sass (~> 3.4, >= 3.4.1)
   capybara
   debug
   importmap-rails
   jbuilder
+  minitest
+  minitest-reporters
   mysql2 (~> 0.5)
   puma (~> 5.0)
   rails (~> 7.0.8)
