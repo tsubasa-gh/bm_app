@@ -1,3 +1,47 @@
 <% provide(:title, 'Sign up') %>
 <h1>Sign up</h1>
-<p>This will be a signup page for new users.</p>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with(model: @user) do |f| %>
+        <%= render 'shared/error_messages' %>
+    
+        <%= f.label :"名前" %>
+        <%= f.text_field :name, class: 'form-control' %>
+
+        <%= f.label :"Eメール" %>
+        <%= f.email_field :email, class: 'form-control' %>
+
+        <%= f.label :"パスワード" %>
+        <%= f.password_field :password, class: 'form-control' %>
+
+        <%= f.label :password_confirmation, :"パスワード（確認用）" %>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+        <%= f.label :"身長" %>
+        <%= f.number_field :height, class: 'form-control' %>
+
+        <%= f.label :"体重" %>
+        <%= f.number_field :weight, class: 'form-control' %>
+
+        <%= f.label :"性別" %>
+        <%= f.select :sex, [['男性', 1], ['女性', 2]], class: 'form-control' %>
+
+        <%= f.label :"年齢" %>
+        <%= f.number_field :age, class: 'form-control' %>
+
+        <%= f.label :"目的" %>
+        <%= f.select :purpose, [['減量', -1], ['現状維持', 0], ['増量', 1]], class: 'form-control' %>
+
+        <%= f.label :"目標体重" %>
+        <%= f.number_field :goal_weight, class: 'form-control' %>
+
+        <%= f.label :"活動レベル" %>
+        <%= f.select :activity_level, [['普段運動はせず、デスクワーク', 1.2], ['週１〜2回軽い運動をする', 1.375], ['週3〜4回軽い運動をする', 1.55],
+                                       ['週5回激しい運動をする', 1.725], ['毎日激しい運動をする・肉体労働者', 1.9]], class: 'form-control' %>
+
+
+        <%= f.submit "アカウント作成", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

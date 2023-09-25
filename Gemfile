@@ -70,6 +70,7 @@ group :test do
   gem "selenium-webdriver"
   gem 'minitest'
   gem 'minitest-reporters'
+  gem 'rails-controller-testing'
 end
 
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'

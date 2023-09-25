@@ -5,7 +5,12 @@ class User < ApplicationRecord
     validates :email, presence: true, length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX }, uniqueness: true
     validates :height, presence: true, numericality: {only_integer: true, less_than: 300}
     validates :weight, presence: true, numericality: true
-    validates :body_temperature, numericality: true
+    validates :body_temperature, numericality: true, allow_blank: true
+    validates :sex, presence: true, numericality: true
+    validates :age, presence: true, numericality: {only_integer: true, less_than: 100}
+    validates :goal_weight, presence: true, numericality: true
+    validates :purpose, presence: true, numericality: true
+    validates :activity_level, presence: true, numericality: true
     has_secure_password
     validates :password, presence: true, length: { minimum: 6 }
 end

@@ -4,7 +4,8 @@ class UserTest < ActiveSupport::TestCase
 
   def setup
     @user = User.new(name: "Example User", email: "user@example.com", height: 170, weight: 65.5, 
-                      body_temperature: 36.5, password: "foobar", password_confirmation: "foobar")
+                      body_temperature: 36.5, password: "foobar", password_confirmation: "foobar", sex: 1, age: 22,
+                      purpose: -1, goal_weight: 55.4, activity_level: 1.3)
   end
 
   test "should be valid" do
