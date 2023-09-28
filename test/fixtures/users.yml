@@ -1,0 +1,12 @@
+michael:
+  name: Michael Example
+  email: michael@example.com
+  password_digest: <%= User.digest('password') %>
+  height: 180
+  weight: 70
+  body_temperature: 36.5
+  sex: 1
+  age: 20
+  goal_weight: 75
+  purpose: 1
+  activity_level: 1.55
