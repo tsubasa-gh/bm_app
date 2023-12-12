@@ -1,0 +1,13 @@
+<% provide(:title, 'All foods') %>
+<h1>All foods</h1>
+
+<%= link_to "新規登録",  new_user_food_path  %>
+
+<ul class="foods">
+  <% @foods.each do |food| %>
+    <li>
+      <%= link_to food.name,  user_food_path(current_user.id, food.id)  %>
+    </li>
+  <% end %>
+</ul>
+

@@ -1,5 +1,6 @@
 class User < ApplicationRecord
     attr_accessor :remember_token
+    has_many :foods, dependent: :destroy
 
     before_save { self.email = email.downcase }
     validates :name, presence: true, length: { maximum: 50 }

@@ -1,0 +1,16 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= @food.name %><br>
+        <%= @food.calorie %><br>
+        <%= @food.protain %><br>
+        <%= @food.fat %><br>
+        <%= @food.carbo %><br>
+      </h1>
+    </section>
+    <%= link_to "削除" , user_food_path, data: { "turbo-method": :delete,
+                                               turbo_confirm: "削除してよろしいですか?" } %>
+  </aside>
+</div>

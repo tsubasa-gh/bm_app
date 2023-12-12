@@ -18,10 +18,10 @@
         <%= f.label :password_confirmation, :"パスワード（確認用）" %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-        <%= f.label :"身長" %>
+        <%= f.label :"身長 (cm)" %>
         <%= f.number_field :height, class: 'form-control' %>
 
-        <%= f.label :"体重" %>
+        <%= f.label :"体重 (kg)" %>
         <%= f.number_field :weight, class: 'form-control' %>
 
         <%= f.label :"性別" %>
@@ -33,7 +33,7 @@
         <%= f.label :"目的" %>
         <%= f.select :purpose, [['減量', -1], ['現状維持', 0], ['増量', 1]], class: 'form-control' %>
 
-        <%= f.label :"目標体重" %>
+        <%= f.label :"目標体重 (kg)" %>
         <%= f.number_field :goal_weight, class: 'form-control' %>
 
         <%= f.label :"活動レベル" %>
