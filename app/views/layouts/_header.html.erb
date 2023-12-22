@@ -13,7 +13,7 @@
       <ul id="navbar-menu" class="nav navbar-nav navbar-right collapse navbar-collapse">
         <li><%= link_to "ホーム",   root_path %></li>
         <% if logged_in? %>
-          <li><%= link_to "今日の食事", '#' %></li>
+          <li><%= link_to "今日の記録", user_daily_records_path(current_user) %></li>
           <li><%= link_to "今日の食事", '#' %></li>
           <li class="dropdown">
             <a href="#" id="account" class="dropdown-toggle">

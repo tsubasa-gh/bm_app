@@ -1,4 +1,8 @@
 <div class="center jumbotron">
+<% if logged_in? %>
+<h1>Progress</h1>
+
+<% else %>
   <h1>Welcome to the Calorie Management App</h1>
 
   <h2>
@@ -6,4 +10,6 @@
   </h2>
 
   <%= link_to "新規登録", signup_path, class: "btn btn-lg btn-primary" %>
+<% end %>
+
 </div>

@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  daily_weight: 1.5
+  total_calorie: 1.5
+  total_protain: 1.5
+  total_fat: 1.5
+  total_carbo: 1.5
+  date: 2023-12-20
+  user: one
+
+two:
+  daily_weight: 1.5
+  total_calorie: 1.5
+  total_protain: 1.5
+  total_fat: 1.5
+  total_carbo: 1.5
+  date: 2023-12-20
+  user: two

@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_02_215000) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_19_230349) do
+  create_table "daily_records", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.float "daily_weight"
+    t.float "total_calorie"
+    t.float "total_protain"
+    t.float "total_fat"
+    t.float "total_carbo"
+    t.date "date"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_daily_records_on_user_id"
+  end
+
   create_table "foods", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.float "calorie"
@@ -41,5 +54,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_02_215000) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "daily_records", "users"
   add_foreign_key "foods", "users"
 end
