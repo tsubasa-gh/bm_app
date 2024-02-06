@@ -11,16 +11,16 @@
         <%= f.text_field :name, class: 'form-control' %>
 
         <%= f.label :"カロリー (kcal)" %>
-        <%= f.number_field :calorie, class: 'form-control' %>
+        <%= f.number_field :calorie, step: "0.1", class: 'form-control' %>
 
         <%= f.label :"タンパク質 (g)" %>
-        <%= f.number_field :protain, class: 'form-control' %>
+        <%= f.number_field :protain, step: "0.1", class: 'form-control' %>
 
         <%= f.label :"脂質 (g)" %>
-        <%= f.number_field :fat, class: 'form-control' %>
+        <%= f.number_field :fat, step: "0.1", class: 'form-control' %>
 
         <%= f.label :"炭水化物 (g)" %>
-        <%= f.number_field :carbo, class: 'form-control' %>
+        <%= f.number_field :carbo, step: "0.1", class: 'form-control' %>
 
         <%= f.submit "作成", class: "btn btn-primary" %>
     <% end %>

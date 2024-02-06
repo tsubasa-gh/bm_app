@@ -1,9 +1,9 @@
-<% provide(:title, 'Record calories') %>
-<h1>カロリーを記録</h1>
+<% provide(:title, 'Add calories') %>
+<h1>カロリーを追加</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_with(model: @daily_record, url: user_daily_records_path) do |f| %>
+    <%= form_with(model: @daily_record, url: user_daily_record_path) do |f| %>
     <!--url: user_daily_records_path-->
         <%= render 'shared/error_messages' %>
 
@@ -22,7 +22,7 @@
         <%= f.label :"日付" %>
         <%= f.date_field :date, class: 'form-control' %>
 
-        <%= f.submit "開始", class: "btn btn-primary" %>
+        <%= f.submit "追加", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

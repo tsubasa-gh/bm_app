@@ -1,7 +1,25 @@
 <% provide(:title, 'Daily Records') %>
 <h1>Today's record</h1>
 
-<%= link_to "記録",  new_user_daily_record_path  %>
+<% if current_user.sex == 1 %>
+    <% in_calorie = (13.4 * current_user.weight + 4.8 * current_user.height - 5.677 * current_user.age + 88.4) * current_user.activity_level %>
+<% else current_user.sex == 2 %>
+    <% in_calorie = (9.2 * current_user.weight + 3.1 * current_user.height - 4.3 * current_user.age + 447.5) * current_user.activity_level %>
+<% end %>
+目標摂取カロリー：<%= in_calorie.to_i %><br>
 
+<% if @daily_record.nil? %>
+    <%= link_to "本日のカロリー記録を開始",  new_user_daily_record_path  %><br>
+<% else %>
+    カロリー<%= @daily_record.total_calorie  %>kcal<br>
+    タンパク質<%= @daily_record.total_protain  %>g<br>
+    脂質<%= @daily_record.total_fat  %>g<br>
+    炭水化物<%= @daily_record.total_carbo  %>g<br>
+    <%= @daily_record.date  %><br><br>
+
+    <%= link_to "カロリー記録",  edit_user_daily_record_path(id: @daily_record.id)  %><br>
+<% end %>
+
+<%= link_to "体重記録",  new_user_daily_weight_path  %>
 
 

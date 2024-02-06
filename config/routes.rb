@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :users do
     resources :foods
     resources :daily_records
+    resources :daily_weights, only: [:create, :destroy, :new]
   end
 end

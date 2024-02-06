@@ -14,7 +14,6 @@
         <li><%= link_to "ホーム",   root_path %></li>
         <% if logged_in? %>
           <li><%= link_to "今日の記録", user_daily_records_path(current_user) %></li>
-          <li><%= link_to "今日の食事", '#' %></li>
           <li class="dropdown">
             <a href="#" id="account" class="dropdown-toggle">
               アカウント <b class="caret"></b>
@@ -23,7 +22,6 @@
               <li><%= link_to "プロフィール", current_user %></li>
               <li><%= link_to "プロフィール設定", edit_user_path(current_user) %></li>
               <li><%= link_to "食べ物", user_foods_path(current_user) %></li>
-              <li><%= link_to "栄養", '#' %></li>
               <li class="divider"></li>
               <li><%= link_to "ログアウト", logout_path, data: { "turbo-method": :delete } %></li>
             </ul>
