@@ -14,6 +14,7 @@
         <li><%= link_to "ホーム",   root_path %></li>
         <% if logged_in? %>
           <li><%= link_to "今日の記録", user_daily_records_path(current_user) %></li>
+          <li><%= link_to "過去の記録", static_pages_past_path %></li>
           <li class="dropdown">
             <a href="#" id="account" class="dropdown-toggle">
               アカウント <b class="caret"></b>

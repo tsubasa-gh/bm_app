@@ -1,0 +1,12 @@
+<div class="center jumbotron">
+
+<ul class="users">
+  <% @daily_weights.each do |daily_weight| %>
+    <li>
+      <%= daily_weight.daily_weight  %>
+      <%= daily_weight.date  %>
+    </li>
+  <% end %>
+</ul>
+
+</div>
