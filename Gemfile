@@ -76,3 +76,6 @@ end
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem "sassc-rails"
 gem "bcrypt"
+
+gem "chartkick" # 追記
+gem 'groupdate' # 追記

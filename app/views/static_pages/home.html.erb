@@ -9,6 +9,8 @@
       <%= daily_weight.date  %>
     </li>
   <% end %>
+
+  <%= line_chart @daily_weights.group(:date).average(:daily_weight), curve: false %>
 </ul>
 
 <% else %>
