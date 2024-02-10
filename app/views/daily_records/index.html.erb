@@ -1,12 +1,7 @@
 <% provide(:title, 'Daily Records') %>
 <h1>Today's record</h1>
 
-<% if current_user.sex == 1 %>
-    <% in_calorie = (13.4 * current_user.weight + 4.8 * current_user.height - 5.677 * current_user.age + 88.4) * current_user.activity_level %>
-<% else current_user.sex == 2 %>
-    <% in_calorie = (9.2 * current_user.weight + 3.1 * current_user.height - 4.3 * current_user.age + 447.5) * current_user.activity_level %>
-<% end %>
-<h3 class="text-center">目標摂取カロリー：<%= in_calorie.to_i %>kcal</h3>
+<h3 class="text-center">目標摂取カロリー：<%= i_calorie.to_i %>kcal</h3>
 
 <br>
 
