@@ -1,28 +1,48 @@
 <% provide(:title, @user.name) %>
 <div class="row">
-  <aside class="col-md-4">
+  <aside>
     <section class="user_info">
       <h1>
-        名前：<%= @user.name %><br>
-        メールアドレス：<%= @user.email %><br>
-        身長：<%= @user.height %><br>
-        体重：<%= @user.weight %><br>
-        性別：<%= sex %><br>
-        年齢：<%= @user.age %><br>
-        目的：<%= purpose %><br>
-        目標体重：<%= @user.goal_weight %><br>
-        活動レベル：
-        <% if @user.activity_level == 1.2 %>
-          普段運動はせず、デスクワーク
-        <% elsif @user.activity_level == 1.375 %>
-          週１〜2回軽い運動をする
-        <% elsif @user.activity_level == 1.55 %>
-          週3〜4回軽い運動をする
-        <% elsif @user.activity_level == 1.725 %>
-          週5回激しい運動をする
-        <% else %>
-          毎日激しい運動をする・肉体労働者
-        <% end %>
+        <table class="table table-bordered text-center user-tbl">
+          <tbody>
+            <tr>
+              <td>名前</td>
+              <td><%= @user.name %></td>
+            </tr>
+            <tr>
+              <td>メールアドレス</td>
+              <td><%= @user.email %>/td>
+            </tr>
+            <tr>
+              <td>身長</td>
+              <td><%= @user.height %>cm</td>
+            </tr>
+            <tr>
+              <td>体重</td>
+              <td><%= @user.weight %>kg</td>
+            </tr>
+            <tr>
+              <td>性別</td>
+              <td><%= sex %></td>
+            </tr>
+            <tr>
+              <td>年齢</td>
+              <td><%= @user.age %>歳</td>
+            </tr>
+            <tr>
+              <td>目的</td>
+              <td><%= purpose %></td>
+            </tr>
+            <tr>
+              <td>目標体重</td>
+              <td><%= @user.goal_weight %>kg</td>
+            </tr>
+            <tr>
+              <td>活動レベル</td>
+              <td><%= activity_level %></td>
+            </tr>
+          </tbody>
+        </table>
       </h1>
     </section>
   </aside>

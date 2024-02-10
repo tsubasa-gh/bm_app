@@ -5,5 +5,5 @@ class DailyRecord < ApplicationRecord
   validates :total_protain, presence: true, numericality: {greater_than_or_equal_to: 0}
   validates :total_fat, presence: true, numericality: {greater_than_or_equal_to: 0}
   validates :total_carbo, presence: true, numericality: {greater_than_or_equal_to: 0}
-  validates :date, presence: true, uniqueness: true
+  validates :date, presence: true
 end

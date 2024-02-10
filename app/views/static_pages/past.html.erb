@@ -1,12 +1,17 @@
 <div class="center jumbotron">
 
+  <h1>Weight records</h1>
 <ul class="users">
-  <% @daily_weights.each do |daily_weight| %>
-    <li>
-      <%= daily_weight.daily_weight  %>
-      <%= daily_weight.date  %>
-    </li>
-  <% end %>
+   <table class="table table-bordered record-tbl text-center">
+      <tbody>
+        <% @daily_weights.each do |daily_weight| %>
+          <tr>
+            <td><%= daily_weight.date %></td>
+            <td><%= daily_weight.daily_weight %>kg</td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 </ul>
 
 </div>

@@ -204,3 +204,19 @@ input, textarea, select, .uneditable-input {
 .dropdown-menu.active {
     display: block;
   }
+
+  .record-btn {
+    width: 200px;
+  }
+
+.record-tbl {
+  table-layout: fixed;
+  margin: 0 auto;
+  width: 30%;
+  margin-top: 30px;
+}
+
+.user-tbl {
+  width: 50%;
+  margin-top: 50px;
+}

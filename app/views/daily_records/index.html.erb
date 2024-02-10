@@ -6,20 +6,38 @@
 <% else current_user.sex == 2 %>
     <% in_calorie = (9.2 * current_user.weight + 3.1 * current_user.height - 4.3 * current_user.age + 447.5) * current_user.activity_level %>
 <% end %>
-目標摂取カロリー：<%= in_calorie.to_i %><br>
+<h3 class="text-center">目標摂取カロリー：<%= in_calorie.to_i %>kcal</h3>
+
+<br>
 
 <% if @daily_record.nil? %>
-    <%= link_to "本日のカロリー記録を開始",  new_user_daily_record_path  %><br>
+    <%= link_to "本日のカロリー記録を開始",  new_user_daily_record_path, class: "btn btn-primary center-block record-btn" %><br>
 <% else %>
-    カロリー<%= @daily_record.total_calorie  %>kcal<br>
-    タンパク質<%= @daily_record.total_protain  %>g<br>
-    脂質<%= @daily_record.total_fat  %>g<br>
-    炭水化物<%= @daily_record.total_carbo  %>g<br>
-    <%= @daily_record.date  %><br><br>
-
-    <%= link_to "カロリー記録",  edit_user_daily_record_path(id: @daily_record.id)  %><br>
+<h4 class="text-center"><%= @daily_record.date  %></h4>
+    <table class="table table-bordered record-tbl text-center">
+        <tbody>
+            <tr>
+                <td>カロリー</td>
+                <td><%= @daily_record.total_calorie %>kcal</td>
+            </tr>
+            <tr>
+                <td>タンパク質</td>
+                <td><%= @daily_record.total_protain %>g</td>
+            </tr>
+            <tr>
+                <td>脂質</td>
+                <td><%= @daily_record.total_fat %>g</td>
+            </tr>
+            <tr>
+                <td>炭水化物</td>
+                <td><%= @daily_record.total_carbo %>g</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <%= link_to "カロリー記録",  edit_user_daily_record_path(id: @daily_record.id), class: "btn btn-primary record-btn center-block" %><br>
 <% end %>
 
-<%= link_to "体重記録",  new_user_daily_weight_path  %>
+<%= link_to "体重記録",  new_user_daily_weight_path, class: "btn btn-primary center-block record-btn" %>
 
 
