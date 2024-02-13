@@ -73,6 +73,10 @@ group :test do
   gem 'rails-controller-testing'
 end
 
+group :production do
+  gem 'pg'
+end
+
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem "sassc-rails"
 gem "bcrypt"
