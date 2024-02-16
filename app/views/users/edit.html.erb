@@ -1,5 +1,5 @@
 <% provide(:title, "Edit user") %>
-<h1>プロフィールの編集</h1>
+<h1>Edit Profile</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -12,10 +12,10 @@
       <%= f.label :"メールアドレス" %>
       <%= f.email_field :email, class: 'form-control' %>
 
-      <%= f.label :"パスワード ※変更時のみ" %>
+      <%= f.label :"パスワード ※変更時のみ入力" %>
       <%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.label :password_confirmation, :"パスワード（確認用） ※変更時のみ" %>
+      <%= f.label :password_confirmation, :"パスワード（確認用） ※変更時のみ入力" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
       <%= f.label :"身長" %>
@@ -40,7 +40,7 @@
       <%= f.select :activity_level, [['普段運動はせず、デスクワーク', 1.2], ['週１〜2回軽い運動をする', 1.375], ['週3〜4回軽い運動をする', 1.55],
                                      ['週5回激しい運動をする', 1.725], ['毎日激しい運動をする・肉体労働者', 1.9]], class: 'form-control' %>
 
-      <%= f.submit "変更", class: "btn btn-primary" %>
+      <%= f.submit "変更", class: "btn custom-btn" %>
     <% end %>
 
   </div>

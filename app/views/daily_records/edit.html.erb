@@ -1,5 +1,6 @@
 <% provide(:title, 'Add calories') %>
-<h1>カロリーを追加</h1>
+<h1>Add calorie</h1>
+<h2>追加する分のカロリーを入力してください</h2>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -7,22 +8,22 @@
     <!--url: user_daily_records_path-->
         <%= render 'shared/error_messages' %>
 
-        <%= f.label :"カロリー (kcal)" %>
+        <%= f.label :"カロリー (kcal) *" %>
         <%= f.number_field :total_calorie, class: 'form-control' %>
 
-        <%= f.label :"タンパク質合計 (g)" %>
+        <%= f.label :"タンパク質 (g)" %>
         <%= f.number_field :total_protain, class: 'form-control' %>
 
-        <%= f.label :"脂質合計 (g)" %>
+        <%= f.label :"脂質 (g)" %>
         <%= f.number_field :total_fat, class: 'form-control' %>
 
-        <%= f.label :"炭水化物合計 (g)" %>
+        <%= f.label :"炭水化物 (g)" %>
         <%= f.number_field :total_carbo, class: 'form-control' %>
 
-        <%= f.label :"日付" %>
+        <%= f.label :"日付 *" %>
         <%= f.date_field :date, class: 'form-control' %>
 
-        <%= f.submit "追加", class: "btn btn-primary" %>
+        <%= f.submit "追加", class: "btn custom-btn" %>
     <% end %>
   </div>
 </div>

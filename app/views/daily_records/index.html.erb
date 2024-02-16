@@ -1,12 +1,12 @@
 <% provide(:title, 'Daily Records') %>
-<h1>Today's record</h1>
+<h1>Today record</h1>
 
 <h3 class="text-center">目標摂取カロリー：<%= i_calorie.to_i %>kcal</h3>
 
 <br>
 
 <% if @daily_record.nil? %>
-    <%= link_to "本日のカロリー記録を開始",  new_user_daily_record_path, class: "btn btn-primary center-block record-btn" %><br>
+    <%= link_to "本日のカロリー記録を開始",  new_user_daily_record_path, class: "btn center-block record-btn custom-btn" %><br>
 <% else %>
 <h4 class="text-center"><%= @daily_record.date  %></h4>
     <table class="table table-bordered record-tbl text-center">
@@ -30,9 +30,9 @@
         </tbody>
     </table>
     <br>
-    <%= link_to "カロリー記録",  edit_user_daily_record_path(id: @daily_record.id), class: "btn btn-primary record-btn center-block" %><br>
+    <%= link_to "カロリー記録",  edit_user_daily_record_path(id: @daily_record.id), class: "btn record-btn center-block custom-btn" %><br>
 <% end %>
 
-<%= link_to "体重記録",  new_user_daily_weight_path, class: "btn btn-primary center-block record-btn" %>
+<%= link_to "体重記録",  new_user_daily_weight_path, class: "btn center-block record-btn custom-btn" %>
 
 
