@@ -1,17 +1,19 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-  <aside>
+<div class="center jumbotron">
+
     <section class="user_info">
-      <h1>
-        <table class="table table-bordered text-center user-tbl">
-          <tbody>
+      <h1>User Information</h1>
+      
+      <div class="user-back">
+        <table class="table table-primary text-center user-tbl">
+          <body>
             <tr>
               <td>名前</td>
               <td><%= @user.name %></td>
             </tr>
             <tr>
               <td>メールアドレス</td>
-              <td><%= @user.email %>/td>
+              <td><%= @user.email %></td>
             </tr>
             <tr>
               <td>身長</td>
@@ -41,9 +43,9 @@
               <td>活動レベル</td>
               <td><%= activity_level %></td>
             </tr>
-          </tbody>
+          </body>
         </table>
-      </h1>
+        </div>
     </section>
-  </aside>
+
 </div>

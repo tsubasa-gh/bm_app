@@ -215,9 +215,23 @@ input, textarea, select, .uneditable-input {
   margin-top: 30px;
 }
 
+/*ユーザー*/
 .user-tbl {
-  width: 50%;
   margin-top: 50px;
+ 
+  margin: 0 auto;
+  td {
+    padding: 10% 0;
+  }
+}
+
+.user-back {
+  background-color: #F8F9FA;
+  border-radius: 7px;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin-top: 30px;
 }
 
 /* ホーム　*/

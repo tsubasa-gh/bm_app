@@ -9,7 +9,8 @@
     <%= link_to "本日のカロリー記録を開始",  new_user_daily_record_path, class: "btn center-block record-btn custom-btn" %><br>
 <% else %>
 <h4 class="text-center"><%= @daily_record.date  %></h4>
-    <table class="table table-bordered record-tbl text-center">
+<div class="user-back">
+    <table class="table table-bordered user-tbl">
         <tbody>
             <tr>
                 <td>カロリー</td>
@@ -29,6 +30,7 @@
             </tr>
         </tbody>
     </table>
+    </div>
     <br>
     <%= link_to "カロリー記録",  edit_user_daily_record_path(id: @daily_record.id), class: "btn record-btn center-block custom-btn" %><br>
 <% end %>
