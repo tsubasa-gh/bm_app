@@ -1,24 +1,70 @@
-# README
+# 概要
+"Calorie Manegement App"は日々の体重と1日の摂取カロリーを記録することで、
+ダイエットや増量の手助けとなるアプリケーションです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+###### URL
+[Calorie Manegement App](https://carorie-manegement-app.onrender.com)
 
-Things you may want to cover:
+###### テストユーザー
+メールアドレス：test01@example.com
+パスワード：pass01
 
-* Ruby version
+### 作成した背景
+私自身、過去に減量や増量を経験した中で一番効果的だった方法は、「毎日の摂取カロリーと体重を記録する」という方法です。この方法は実際に減量・増量を繰り返すアスリートやプロボディビルダーも行なっている基本的な手法です。
+しかし、多くの人からしてみると、
+「具体的にどれくらいのカロリーを摂ればいいのか分からない」
+「体重と消費カロリーを一度に記録したい」
+などといった課題があるため、それらを解決するために本アプリケーションを作成いたしました。
 
-* System dependencies
+# 使用技術
+・Ruby 3.2.2
+・Ruby on Rails 7.0.8
+・HTML
+・CSS
+・JavaScript
+・Bootstrap
+・MySQL 8.3.0
+・PostgleSQL 14.11
+・Render
+・Git 2.42.0/GitHub
 
-* Configuration
+# ER図
+![bmApp_ER drawio](https://github.com/tsubasa-gh/bm_app/assets/132177879/55b30323-4d79-4fee-9b07-b59b871bb829)
 
-* Database creation
 
-* Database initialization
+# 機能一覧
 
-* How to run the test suite
+1. ログイン機能
+1. ログアウト機能
+1. ログイン状態保持機能
+1. ユーザー新規登録機能
+1. プロフィール表示機能
+1. プロフィール編集機能
+1. 体重記録機能
+1. カロリー記録機能
+1. カロリー追加機能
+1. 摂取カロリー自動計算機能
+1. 体重推移グラフ機能
 
-* Services (job queues, cache servers, search engines, etc.)
+# 使用イメージ
+#### 1日のカロリーを記録
+・ユーザーの身長や体重などの情報から、その人に合わせた目標摂取カロリーが設定されます。
 
-* Deployment instructions
+・「本日のカロリー記録を開始」ボタンから１食目のカロリーを入力して記録を開始します。
+※カロリーと日付以外は任意の項目です。
+<img width="1339" alt="カロリー記録開始" src="https://github.com/tsubasa-gh/bm_app/assets/132177879/589b2a37-ffff-458b-a62c-f623d74cf72d">
 
-* ...
+・「カロリー記録」ボタンから追加する分のカロリーを入力できます。
+<img width="1291" alt="カロリー記録" src="https://github.com/tsubasa-gh/bm_app/assets/132177879/575bef58-3347-4573-9e19-7fea9b87a216">
+
+#### 毎日の体重を記録
+「体重記録」ボタンから指定した日付の体重を入力できます。
+<img width="1291" alt="体重記録" src="https://github.com/tsubasa-gh/bm_app/assets/132177879/0341adb3-cc35-46e5-9ed8-d75d970128c7">
+
+「Home」タブに記録した体重の推移がグラフとして表示されます。
+※「Past Record」から記録した体重を一覧表示することもできます。
+<img width="1241" alt="グラフ" src="https://github.com/tsubasa-gh/bm_app/assets/132177879/1632e933-7786-4f16-af47-6a5e792fe839">
+
+# 工夫点
+本アプリケーションでは、「具体的にどれくらいのカロリーを摂ればいいのか分からない」という課題を一番解決したい課題としました。本課題が、カロリー計算の際にユーザーが最も障害と感じる課題であり、効果が大きいと考えたためです。
+これを解決するため、ユーザーの身長や体重、日々の活動レベルを入力してもらうことで、必要なカロリーを自動的に算出するという機能を実装しました。
