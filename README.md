@@ -17,16 +17,16 @@
 などといった課題があるため、それらを解決するために本アプリケーションを作成いたしました。
 
 # 使用技術
-・Ruby 3.2.2
-・Ruby on Rails 7.0.8
-・HTML
-・CSS
-・JavaScript
-・Bootstrap
-・MySQL 8.3.0
-・PostgleSQL 14.11
-・Render
-・Git 2.42.0/GitHub
+- Ruby 3.2.2
+- Ruby on Rails 7.0.8
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- MySQL 8.3.0
+- PostgleSQL 14.11
+- Render
+- Git 2.42.0/GitHub
 
 # ER図
 ![bmApp_ER drawio](https://github.com/tsubasa-gh/bm_app/assets/132177879/55b30323-4d79-4fee-9b07-b59b871bb829)
