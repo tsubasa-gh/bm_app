@@ -83,3 +83,5 @@ gem "bcrypt"
 
 gem "chartkick" # 追記
 gem 'groupdate' # 追記
+
+gem 'rails-i18n'

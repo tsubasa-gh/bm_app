@@ -7,7 +7,7 @@
   <div class="col-md-6 col-md-offset-3">
     <%= form_with(model: @daily_record, url: user_daily_records_path) do |f| %>
     <!--url: user_daily_records_path-->
-        <%= render 'shared/error_messages' %>
+        <%= render 'shared/error_messages', object: f.object %>
 
         <%= f.label :"カロリー (kcal) *" %>
         <%= f.number_field :total_calorie, class: 'form-control' %>

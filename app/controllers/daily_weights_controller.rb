@@ -8,7 +8,7 @@ class DailyWeightsController < ApplicationController
 
     def create
         @daily_weight = current_user.daily_weights.build(daily_weight_params)
-        if @daily_weight.save!
+        if @daily_weight.save
           redirect_to root_path
         else
           render 'new', status: :unprocessable_entity

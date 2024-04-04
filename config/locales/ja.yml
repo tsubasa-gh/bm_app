@@ -1,0 +1,15 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       name: 名前
+       email: メールアドレス
+       height: 身長
+       weight: 体重
+       age: 年齢
+       goal_weight: 目標体重
+       password: パスワード
+       password_confirmation: パスワード（確認用）
+     daily_weight:
+       date: 日付
+       daily_weight: 体重
