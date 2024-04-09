@@ -8,7 +8,12 @@ class StaticPagesController < ApplicationController
   end
 
   def past
-    @daily_weights = @current_user.daily_weights
-    @daily_records = current_user.daily_records
+    @date = params[:date]
+    if @date.nil?
+      @date = Date.today
+    end
+    @daily_weight = @current_user.daily_weights.find_by(date: @date)
+    @daily_record = @current_user.daily_records.find_by(date: @date)
   end
+
 end

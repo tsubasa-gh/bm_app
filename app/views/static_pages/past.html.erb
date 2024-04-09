@@ -1,17 +1,25 @@
 <div class="center jumbotron">
 
-  <h1>Weight records</h1>
+  <h1>Past records</h1>
+
+  <div>
+    <%= form_with(url: static_pages_past_path, method: :get) do |f| %>
+      <p>日付を選択してください</p>
+      <%= f.date_field :date, class: 'form-control' %>
+      <%= f.submit "確認", class: "btn custom-btn" %>
+    <% end %>
+  <div>
+
   <div class="user-back">
    <table class="table table-primary user-tbl">
       <tbody>
-        <% @daily_weights.each do |daily_weight| %>
           <tr>
-            <td><%= daily_weight.date %></td>
-            <td><%= daily_weight.daily_weight %>kg</td>
+            <td><%= @date %></td>
+            <td><%= weight %></td>
+            <td><%= record %></td>
           </tr>
-        <% end %>
       </tbody>
     </table>
-</div>
+  </div>
 
 </div>
