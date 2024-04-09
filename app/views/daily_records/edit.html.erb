@@ -21,7 +21,7 @@
         <%= f.number_field :total_carbo, class: 'form-control' %>
 
         <%= f.label :"日付 *" %>
-        <%= f.date_field :date, class: 'form-control' %>
+        <%= f.date_field :date, disabled: true, class: 'form-control' %>
 
         <%= f.submit "追加", class: "btn custom-btn" %>
     <% end %>
