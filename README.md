@@ -61,9 +61,12 @@
 「体重記録」ボタンから指定した日付の体重を入力できます。
 <img width="1291" alt="体重記録" src="https://github.com/tsubasa-gh/bm_app/assets/132177879/0341adb3-cc35-46e5-9ed8-d75d970128c7">
 
-「Home」タブに記録した体重の推移がグラフとして表示されます。
-※「Past Record」から記録した体重を一覧表示することもできます。
-<img width="1241" alt="グラフ" src="https://github.com/tsubasa-gh/bm_app/assets/132177879/1632e933-7786-4f16-af47-6a5e792fe839">
+「Home」タブで、選択した期間の体重の推移がグラフとして表示されます。
+<img width="1440" alt="体重グラフ" src="https://github.com/tsubasa-gh/bm_app/assets/132177879/c3feac2e-c129-4e51-8d4e-63100a0721d3">
+
+#### 過去の記録を確認
+「Past Record」タブで、選択した日付の体重やカロリーを確認することができます。
+<img width="1440" alt="過去の記録" src="https://github.com/tsubasa-gh/bm_app/assets/132177879/fcea6403-9d2a-4be5-b8c7-a95ff8d8b956">
 
 # 工夫点
 本アプリケーションでは、「具体的にどれくらいのカロリーを摂ればいいのか分からない」という課題を一番解決したい課題としました。本課題が、カロリー計算の際にユーザーが最も障害と感じる課題であり、効果が大きいと考えたためです。

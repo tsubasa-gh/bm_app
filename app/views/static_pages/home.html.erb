@@ -3,7 +3,12 @@
 <h1>Weight progress</h1>
 
 <ul class="users">
-  <%= line_chart @daily_weights.group(:date).average(:daily_weight), curve: false %>
+  <%= line_chart @daily_weights.group(:date).average(:daily_weight), curve: false, xmin: @start_date.to_s, xmax: Date.current.to_s %>
+
+  <%= form_with(url: static_pages_home_path, method: :get) do |f| %>
+     <%= f.select :period, [["1週間", "week"], ["1ヶ月", "month"], ["3ヶ月", "3month"], ["半年", "6month"], ["1年", "year"]], include_blank: "表示期間を選択してください" %>
+     <%= f.submit '表示', class: "btn custom-btn"%>
+  <% end %>
 </ul>
 
 <% else %>
@@ -12,5 +17,4 @@
   <br>
   <%= link_to "Sign up", signup_path, class: "btn btn-lg custom-btn" %>
 <% end %>
-
 </div>
